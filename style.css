@@ -1,0 +1,134 @@
+/* Import font biar lebih cakep */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #FFD6D6, #FFE9C8); /* peach gradien */
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container utama */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* biar di atas confetti */
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeDown 1s ease-in-out;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ff9f9f;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+  animation: zoomIn 1.2s ease;
+}
+
+header h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #c94f4f;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #c94f4f;
+  font-weight: 600;
+  border-bottom: 2px solid #ffd6d6;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  margin: 8px 0;
+  font-size: 1.05em;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background: #ff9f9f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #c94f4f;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #444;
+  font-size: 0.9em;
+  margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeDown {
+  from {opacity: 0; transform: translateY(-30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes zoomIn {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Confetti canvas */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
